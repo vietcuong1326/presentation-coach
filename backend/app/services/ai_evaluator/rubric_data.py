@@ -1,0 +1,176 @@
+from typing import Dict, Any, List
+
+RUBRIC_CRITERIA: List[Dict[str, Any]] = [
+    # Attitude (4)
+    {
+        "id": "PREPARATION",
+        "name": "Preparation",
+        "category": "ATTITUDE",
+        "scope": "GROUP",
+        "description": "Slide completeness, organization, and visual consistency showing adequate preparation.",
+        "mvp_supported": True,
+    },
+    {
+        "id": "COOPERATION",
+        "name": "Cooperation",
+        "category": "ATTITUDE",
+        "scope": "GROUP",
+        "description": "Smooth handovers between presenters and teamwork coherence.",
+        "mvp_supported": True,
+    },
+    {
+        "id": "PUNCTUALITY",
+        "name": "Punctuality",
+        "category": "ATTITUDE",
+        "scope": "GROUP",
+        "description": "Adherence to submission schedule (Requires LMS/submission metadata).",
+        "mvp_supported": False,  # Outside MVP data scope
+    },
+    {
+        "id": "ENTHUSIASM",
+        "name": "Enthusiasm",
+        "category": "ATTITUDE",
+        "scope": "INDIVIDUAL",
+        "description": "Observable vocal energy and expressive speech delivery.",
+        "mvp_supported": True,
+    },
+    # Project (7)
+    {
+        "id": "CONTENT",
+        "name": "Content",
+        "category": "PROJECT",
+        "scope": "GROUP",
+        "description": "Depth, relevance, accuracy of presented ideas aligned with objectives.",
+        "mvp_supported": True,
+    },
+    {
+        "id": "LOGICALITY",
+        "name": "Logicality",
+        "category": "PROJECT",
+        "scope": "GROUP",
+        "description": "Clarity of flow, structured transitions between problem, method, and conclusion.",
+        "mvp_supported": True,
+    },
+    {
+        "id": "CREATIVITY",
+        "name": "Creativity",
+        "category": "PROJECT",
+        "scope": "GROUP",
+        "description": "Novelty of approach, relatable examples, or fresh angles.",
+        "mvp_supported": True,
+    },
+    {
+        "id": "EFFECTIVENESS",
+        "name": "Effectiveness",
+        "category": "PROJECT",
+        "scope": "GROUP",
+        "description": "Clear takeaways demonstrating achievement of the stated objectives.",
+        "mvp_supported": True,
+    },
+    {
+        "id": "MEANINGFULNESS",
+        "name": "Meaningfulness",
+        "category": "PROJECT",
+        "scope": "GROUP",
+        "description": "Value and practical relevance of the topic to target audience.",
+        "mvp_supported": True,
+    },
+    {
+        "id": "REFERENCES",
+        "name": "References",
+        "category": "PROJECT",
+        "scope": "GROUP",
+        "description": "Proper citations, credited sources on slides or spoken references.",
+        "mvp_supported": True,
+    },
+    {
+        "id": "SCALE",
+        "name": "Scale",
+        "category": "PROJECT",
+        "scope": "GROUP",
+        "description": "Appropriate scope and depth for the expected duration.",
+        "mvp_supported": True,
+    },
+    # Presentation (9)
+    {
+        "id": "LAYOUT",
+        "name": "Layout",
+        "category": "PRESENTATION",
+        "scope": "GROUP",
+        "description": "Slide typography, readability, hierarchy and visual clutter control.",
+        "mvp_supported": True,
+    },
+    {
+        "id": "ENGAGING_AUDIENCE",
+        "name": "Engaging the Audience",
+        "category": "PRESENTATION",
+        "scope": "INDIVIDUAL",
+        "description": "Rhetorical questions, interactive phrasing, direct audience address.",
+        "mvp_supported": True,
+    },
+    {
+        "id": "SPEECH_VOLUME_SPEED",
+        "name": "Speech Volume & Speed",
+        "category": "PRESENTATION",
+        "scope": "INDIVIDUAL",
+        "description": "Well-paced delivery (approx 120-150 words per minute), clear pauses, audible volume.",
+        "mvp_supported": True,
+    },
+    {
+        "id": "LANGUAGE_SKILLS",
+        "name": "Language Skills",
+        "category": "PRESENTATION",
+        "scope": "INDIVIDUAL",
+        "description": "Grammatical precision, academic vocabulary, clear transitions, minimal filler words.",
+        "mvp_supported": True,
+    },
+    {
+        "id": "PRONUNCIATION",
+        "name": "Pronunciation",
+        "category": "PRESENTATION",
+        "scope": "INDIVIDUAL",
+        "description": "Clarity of English phonemes, intonation and stress patterns.",
+        "mvp_supported": True,
+    },
+    {
+        "id": "EYE_CONTACT_POSTURE",
+        "name": "Eye Contact & Posture",
+        "category": "PRESENTATION",
+        "scope": "INDIVIDUAL",
+        "description": "Visual gaze, posture, gestures (Visual analysis strictly outside MVP).",
+        "mvp_supported": False,  # Out of scope for MVP
+    },
+    {
+        "id": "ACTIVE_PARTICIPATION",
+        "name": "Active Participation",
+        "category": "PRESENTATION",
+        "scope": "INDIVIDUAL",
+        "description": "Balanced contribution and engagement across group members.",
+        "mvp_supported": True,
+    },
+    {
+        "id": "MCQ_TEST",
+        "name": "MCQ Test",
+        "category": "PRESENTATION",
+        "scope": "GROUP",
+        "description": "Audience quiz/questions (Requires separate test data).",
+        "mvp_supported": False,  # Outside MVP data scope
+    },
+    {
+        "id": "REPORT",
+        "name": "Report",
+        "category": "PRESENTATION",
+        "scope": "GROUP",
+        "description": "Written report document attached to presentation (if uploaded).",
+        "mvp_supported": True,
+    },
+]
+
+RUBRIC_LEVELS = {
+    5: "SUPERIOR",
+    4: "EXCELLENT",
+    3: "VERY_GOOD",
+    2: "SATISFACTORY",
+    1: "UNACCEPTABLE",
+}
+

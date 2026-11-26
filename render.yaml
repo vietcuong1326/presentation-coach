@@ -1,0 +1,38 @@
+services:
+  - type: web
+    name: ai-presentation-coach-api
+    runtime: docker
+    dockerfilePath: ./backend/Dockerfile
+    dockerContext: ./backend
+    plan: free
+    healthCheckPath: /health
+    envVars:
+      - key: APP_ENV
+        value: production
+      - key: API_V1_STR
+        value: /api
+      - key: ALLOWED_ORIGINS
+        sync: false
+      - key: SUPABASE_URL
+        sync: false
+      - key: SUPABASE_ANON_KEY
+        sync: false
+      - key: SUPABASE_SERVICE_ROLE_KEY
+        sync: false
+      - key: SUPABASE_JWT_SECRET
+        sync: false
+      - key: AI_PROVIDER
+        value: gemini
+      - key: GEMINI_API_KEY
+        sync: false
+      - key: GEMINI_MODEL
+        value: gemini-3.5-flash
+      - key: OPENAI_API_KEY
+        sync: false
+      - key: MAX_SLIDE_SIZE_MB
+        value: "20"
+      - key: MAX_MEDIA_SIZE_MB
+        value: "50"
+      - key: MAX_MEDIA_DURATION_SECONDS
+        value: "900"
+

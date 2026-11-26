@@ -1,0 +1,19 @@
+{
+  "project": "AI Presentation Coach",
+  "version": "1.0",
+  "files": [
+    "README.md",
+    "SRS_MVP.md",
+    "ARCHITECTURE_MVP.md",
+    "DATABASE.md",
+    "API.md",
+    "AI_EVALUATION.md",
+    "RUBRIC_SPECIFICATION.md",
+    "UI_UX.md",
+    "DEVELOPMENT_PLAN.md",
+    "TASKS.md",
+    "AGENTS.md"
+  ],
+  "scope": "7-day MVP",
+  "generated_at": "2026-11-21"
+}
